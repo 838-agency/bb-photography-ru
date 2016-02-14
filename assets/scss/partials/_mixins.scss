@@ -1,0 +1,76 @@
+/***************
+TRANSITION
+***************/
+
+/* @include transition(all 0.2s ease-in-out); */
+@mixin transition($transition...) {
+    // defining prefixes so we can use them in mixins below
+    $prefixes:      ("-webkit-", "" );
+    @each $prefix in $prefixes {
+        #{$prefix}transition: $transition;
+    }
+}
+
+
+/***************
+BOX SIZING
+***************/
+
+/* @include box-sizing(border-box); */
+@mixin box-sizing($type: border-box) {
+    -webkit-box-sizing: $type;
+    -moz-box-sizing:    $type;
+    -ms-box-sizing:     $type;
+    box-sizing:         $type;
+}
+
+
+/***************
+LINK STYLING
+***************/
+
+/* @include link-style($default-color, $hover-color, $visited-color); */
+@mixin link-style(
+    $default-color: $link-color,
+    $hover-color: lighten($link-color, 10%),
+    $visited-color: $visited-link-color
+) {
+    color: $default-color;
+    border-bottom-color: fade-out($default-color, 0.8);
+
+    &:visited {
+        color: $visited-color;
+        border-bottom-color: fade-out($visited-color, 0.8);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $hover-color;
+        border-bottom-color: fade-out($hover-color, 0.8);
+    }
+}
+
+
+/***************
+CLEAR AFTER FLOATS
+***************/
+
+@mixin clearfix {
+    zoom: 1;
+
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.clearfix {
+    @include clearfix;
+}

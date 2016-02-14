@@ -1,0 +1,190 @@
+/***************
+TABLE STYLES
+***************/
+
+table {
+    width: 100%;
+    margin: 3rem 0;
+
+    border: 1px solid $light-border-color;
+
+    caption {
+        margin: 1rem;
+        font-size: 0.75em;
+        color: lighten(black, 20%);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+tr {
+    &:nth-child(even) {
+        background-color: $light-bg-color;
+    }
+}
+
+
+td {
+    padding: 1.5rem 1rem;
+    line-height: 1.33;
+    font-size: 0.9em;
+    border: 1px solid $light-border-color;
+}
+
+th {
+    padding: 1.5rem 1rem;
+    line-height: 1.33;
+    background-color: $light-bg-color;
+    border: 1px solid $light-border-color;
+    font-family: $sans-serif;
+}
+
+thead th {
+    padding: 2rem 1rem;
+}
+
+tbody th {
+    font-size: 0.9em;
+    background-color: inherit;
+}
+
+//  Inverted table has columns highlighted, not rows
+.inverted {
+    tr:nth-child(even) {
+        background-color: inherit;
+    }
+
+    th:nth-child(odd),
+    td:nth-child(odd) {
+        background-color: $light-bg-color;
+    }
+}
+
+
+@media only screen and (max-width: 839px) {
+    .narrative {
+        display: block;
+        border: none;
+
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr {
+            margin-bottom: 1.5rem;
+        }
+
+        th {
+            padding: 1em;
+            font-size: 1em;
+            background-color: $light-bg-color;
+        }
+
+        td {
+            position: relative;
+            padding: 1em 0.5em;
+            padding-left: 35%;
+            border-top: none;
+            text-align: left;
+        }
+
+        td:before {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            width: 30%;
+            padding-right: 1rem;
+            font-family: $sans-serif;
+            font-weight: 700;
+            text-align: left;
+            content: attr(data-title);
+            -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+        }
+
+        tr:nth-child(even),
+        td:nth-child(odd) {
+            background-color: inherit;
+        }
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .inverted {
+        @include clearfix();
+        display: block;
+        border: none;
+
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        tr {
+            float: left;
+            width: 50%;
+        }
+
+        td {
+            border-top: none;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 1rem;
+        }
+
+        tr + tr th,
+        tr + tr td {
+            border-left: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    table {
+        margin: 2rem 0;
+    }
+}
+
+@media only screen and (max-width: 439px) {
+    .narrative {
+        th {
+            padding: 1em;
+            font-size: 0.9em;
+        }
+
+        td {
+            position: relative;
+            padding: 1em;
+            font-size: 0.8em;
+        }
+
+        td:before {
+            position: relative;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: block;
+            margin-bottom: 0.8rem;
+            -webkit-transform: none;
+                -ms-transform: none;
+                    transform: none;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+/***************
+COLOR VARIABLES
+***************/
+
+// Better default colors
+// Cool
+$aqua:  #7FDBFF;
+$blue:  #0074D9;
+$navy:  #001F3F;
+$teal:  #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime:  #01FF70;
+// Warm
+$yellow:  #FFDC00;
+$orange:  #FF851B;
+$red:     #FF4136;
+$fuchsia: #F012BE;
+$purple:  #B10DC9;
+$maroon:  #85144B;
+// Gray Scale
+$white:  #fff;
+$silver: #ddd;
+$grey:   #aaa;
+$black:  #111;
+
+// Color variables
+$primary-color: #AA5144;
+$secondary-color: #623E39;
+$tertiary-color: #aaa;
+$link-color: #3890E6;
+$visited-link-color: #B91EA6;
+
+$bad-color: $red; // Bad color for errors, validation etc.
+$good-color: $green; // Good color for success etc.
+$info-color: $blue; // Good color for success etc.
+$warning-color: $orange; // Good color for success etc.
+$subtle-color: $grey; // Subtle color for subtle text
+
+$light-border-color: fade-out(lighten($primary-color, 30%), 0.5);
+$light-bg-color: #F8F3EA;
+$bg-color: #F0E2C6;
+
+/***************
+CONSISTENT SETTINGS
+***************/
+
+$br: 5px; // Border-radius
+$btn-br: 5px; // Button border-radius
+$padding: 40px; // Padding and margins
+$line-height: 44px; // Consistent height for buttons, inputs etc.
+
+
+/***************
+TYPE SETTINGS
+***************/
+
+$sans-serif: "PT Sans", Helvetica, Arial, sans-serif;
+$serif: "PT Serif", Georgia, Times, serif;
+
+
+/***************
+TRANSITIONS
+***************/
+
+$complex-transition-easing: cubic-bezier(.15, 1, .25, 1);
+
+$simple-transition: 0.1s ease-in-out 0s;
+$complex-transition: 0.5s $complex-transition-easing 0s;

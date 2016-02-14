@@ -1,0 +1,11 @@
+node_modules
+bower_components
+build
+dist
+assets/content/images/_source/*.jpg
+assets/css
+npm-debug.log
+_site
+.sass-cache
+.DS_Store
+.ruby-version

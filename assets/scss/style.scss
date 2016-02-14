@@ -1,0 +1,28 @@
+// Use Compass
+@import "compass";
+
+// Reset using Normalize
+@import "normalize";
+
+// Site configuration
+@import "config";
+
+// Import Partials
+@import "partials/typography";
+@import "partials/mixins";
+@import "partials/grid";
+@import "partials/tables";
+@import "partials/original-title";
+
+// Pages
+@import "pages/table-of-contents";
+@import "pages/about";
+@import "pages/404";
+
+// Mobile up base styles
+@import "breakpoints/mobileup";
+
+// Import media queries add more as you desire
+@media only screen and (min-width: 480px) { @import "breakpoints/480up";}
+@media only screen and (min-width: 840px) { @import "breakpoints/840up";}
+@media only screen and (min-width: 1000px) { @import "breakpoints/1000up";}

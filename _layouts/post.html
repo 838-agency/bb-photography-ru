@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="post">
+  <h1 class="postTitle">{{ page.title }}</h1>
+  <p class="postSubTitle">{{ page.description }}</p>
+
+  {% if page.ledeimage %}
+    {% imgdatadiv __page_ledeimage %}{% endimgdatadiv %}
+  {% endif %}
+
+  {{ content }}
+
+</div>
+
+{% include sharing.html %}

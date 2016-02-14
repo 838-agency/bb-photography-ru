@@ -1,0 +1,127 @@
+/***************
+GLOBAL STYLES
+***************/
+
+body {
+    p, ul, ol {
+        margin: 0 0 2rem;
+        font-size: 1em;
+    }
+}
+
+
+/***************
+HEADER STYLING
+***************/
+
+.header-headings {
+    float: left;
+}
+
+.header .navigation {
+    float: right;
+    margin-top: 0;
+}
+
+
+/***************
+POST STYLING
+***************/
+
+.post,
+.page {
+    .postTitle {
+        line-height: 1.25;
+    }
+
+    .meta,
+    .postSubTitle {
+        font-size: 1.1em;
+        line-height: 1.375;
+    }
+
+    blockquote {
+        margin: 4em 0;
+
+        footer {
+            font-size: 1em;
+        }
+    }
+
+    figure {
+        margin: 3rem 0;
+
+        &.wide.tall {
+            padding: 1.5rem 1.5rem 0;
+        }
+
+        figcaption {
+            line-height: 1.75;
+        }
+
+        figcaption p {
+            @include pad(1 of 12);
+            font-size: 1.2em;
+        }
+
+        .image-meta dt,
+        .image-meta dd {
+            display: inline-block;
+        }
+
+        .image-meta dt {
+            font-weight: 700;
+        }
+
+        .image-meta + .caption {
+            padding-top: 0.5rem;
+        }
+    }
+
+    .alert {
+        padding: 0 3rem;
+        margin: 3rem auto;
+    }
+}
+
+.sharing-container {
+    li {
+        font-size: 0.7em;
+    }
+}
+
+
+/***************
+FOOTER STYLING
+***************/
+
+.footer {
+    .about-book {
+        font-size: 1em;
+    }
+
+    .original-title {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
+
+    .right-column {
+        margin-top: 0;
+        width: 55%;
+        margin-left: 45%;
+        max-width: 18em;
+    }
+
+    .footerNav .navigation {
+        margin-bottom: 1rem;
+        font-size: 1em;
+    }
+
+    .copy {
+        padding-left: 0;
+    }
+}

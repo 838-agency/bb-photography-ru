@@ -1,0 +1,44 @@
+<div class="footer">
+    <!-- POST NAVIGATION -->
+    <div class="postNav clearfix">
+        {% assign next_lesson = page.next %}
+        {% assign next_lesson_pretitle = 'Следующая глава' %}
+
+        {% if page.previous == nil and page.next == nil %}
+            {% assign next_lesson = site.posts.last %}
+            {% assign next_lesson_pretitle = 'Первая глава' %}
+        {% endif %}
+
+        {% if next_lesson.url %}
+            <a class="next{% if next_lesson.ledeimage %} image{% endif %}" href="{{ next_lesson.url | prepend: site.baseurl }}" {% if next_lesson.ledeimage %} style="background-image: url({{ site.images_dir | prepend: site.baseurl | append: '/preview/' | append: next_lesson.ledeimage }});"{% endif %}>
+                <article>
+                    <span>{{ next_lesson_pretitle }}</span>
+                    <h3>{{ next_lesson.title }}</h3>
+                </article>
+            </a>
+        {% else %}
+            <div class="prev">
+                {% include footer_nav.html %}
+            </div>
+        {% endif %}
+
+        {% if page.previous.url %}
+            <a class="prev{% if page.previous.ledeimage %} image{% endif %}" href="{{ page.previous.url | prepend: site.baseurl }}"{% if page.previous.ledeimage %} style="background-image: url({{ site.images_dir | prepend: site.baseurl | append: '/preview/' | append: page.previous.ledeimage }});"{% endif %}>
+                <article>
+                    <span>Предыдущая глава</span>
+                    <h3>{{ page.previous.title }}</h3>
+                </article>
+            </a>
+        {% else %}
+            <div class="next">
+                {% include footer_nav.html %}
+            </div>
+        {% endif %}
+    </div>
+
+    {% if page.previous.url and page.next.url %}
+        <div class="footerStickyCopy">
+            {% include footer_copy.html %}
+        </div>
+    {% endif %}
+</div><!-- end .footer -->

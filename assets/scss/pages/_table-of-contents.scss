@@ -1,0 +1,130 @@
+.table-of-contents {
+    margin-top: 3rem;
+}
+
+.table-of-contents .posts {
+    @include container;
+    margin-right: -gutter();
+    width: 100%;
+}
+
+.table-of-contents .posts li {
+    @include span(4 of 12);
+    @include gutters(inside);
+    margin-right: 0;
+    height: 23rem;
+    margin-bottom: 3rem;
+
+    &:before {
+        display: none;
+    }
+}
+
+.table-of-contents .posts a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        img {
+            opacity: 0.8;
+        }
+
+        figure {
+            background-color: $white;
+        }
+    }
+}
+
+.table-of-contents .posts {
+    img {
+        @include transition(opacity $simple-transition);
+        display: block;
+    }
+
+    figure {
+        @include transition(background-color $simple-transition);
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    figcaption {
+        padding: 0.8rem 0.8rem 0.5rem;
+        font-size: 0.9em;
+    }
+
+    h4 {
+        margin-top: 1em;
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    p {
+        width: 100%;
+        font-size: 0.8em;
+    }
+}
+
+
+@media only screen and (max-width: 999px) {
+    .table-of-contents .posts li {
+        height: 20rem;
+    }
+
+    .table-of-contents .posts h4 {
+        margin-top: 0.5rem;
+    }
+
+    .table-of-contents .posts p {
+        padding: 0;
+        line-height: 1.33;
+    }
+}
+
+@media only screen and (max-width: 839px) {
+    .table-of-contents .posts li {
+        @include span(6 of 12);
+        @include gutters(inside);
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .table-of-contents .posts {
+        margin-bottom: 3rem;
+    }
+
+    .table-of-contents .posts li {
+        float: none;
+        padding: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .table-of-contents .posts figure {
+        @include clearfix();
+        border: none;
+        background-color: transparent;
+    }
+
+    .table-of-contents .posts img {
+        float: left;
+        width: 35%;
+    }
+
+    .table-of-contents .posts figcaption {
+        margin-left: 35%;
+        text-align: left;
+        padding: 0.1rem 0 0 1rem;
+        font-size: 1.1em;
+    }
+
+    .table-of-contents .posts h4 {
+        margin-top: 0;
+    }
+}

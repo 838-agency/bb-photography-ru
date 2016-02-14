@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<div class="page">
+  <h1 class="postTitle">{{ page.title }}</h1>
+  {% if page.description %}<p class="postSubTitle">{{ page.description }}</p>{% endif %}
+
+  {% if page.ledeimage %}
+    {% imgdatadiv __page_ledeimage %}{% endimgdatadiv %}
+  {% endif %}
+
+  {{ content }}
+</div>

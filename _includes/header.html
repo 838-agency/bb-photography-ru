@@ -1,0 +1,10 @@
+<div class="header{% if page.is_home == true %} header-home{% endif %}">
+    <div class="container">
+        <div class="header-headings">
+            <h4>{{ site.author }}</h4>
+            <h1 class="logo"><a href="{{ site.baseurl }}/">{{ site.title_html }}</a></h1>
+            <h2>{{ site.description }}</h2>
+        </div>
+        {% include navigation.html %}
+    </div>
+</div><!-- end .header -->

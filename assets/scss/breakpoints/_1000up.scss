@@ -1,0 +1,24 @@
+.container {
+    @include container(960px);
+}
+
+.header {
+    .container {
+        @include container(960px);
+    }
+}
+
+.header.header-home {
+    margin-bottom: 4rem;
+}
+
+
+/***************
+FOOTER STYLES
+***************/
+
+.footer {
+    .footerStickyCopy p {
+        @include container(720px);
+    }
+}

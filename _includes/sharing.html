@@ -1,0 +1,8 @@
+<div class="sharing-container">
+    {% capture share_url %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | url_encode }}{% endcapture %}
+    <h5>Поделиться</h5>
+    <ul class="sharing-options">
+        <li class="twitter"><a href="https://twitter.com/intent/tweet?url={{ share_url }}" target="_blank">в твиттере</a></li>
+        <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}" target="_blank">в фейсбуке</a></li>
+    </ul>
+</div>

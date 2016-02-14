@@ -1,0 +1,105 @@
+body {
+    font-size: 1em;
+    line-height: 1.45;
+
+    .intro {
+        font-size: 1.25em;
+        line-height: 1.7;
+    }
+}
+
+@media (min-width: 43.75em) {
+    body {
+        font-size: 1em;
+        line-height: 1.375;
+    }
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin: 1.5em 0 0.5em;
+    font-family: $sans-serif;
+}
+
+// Headings
+h1, .h1 {
+    font-size: 2em;
+    line-height: 1.25;
+}
+
+@media (min-width: 43.75em) {
+    h1, .h1 {
+        font-size: 2.5em;
+        line-height: 1.125;
+    }
+}
+
+@media (min-width: 56.25em) {
+    h1, .h1 {
+        font-size: 3em;
+        line-height: 1.05;
+    }
+}
+
+h2, .h2 {
+    font-size: 1.625em;
+    line-height: 1.10;
+}
+
+@media (min-width: 43.75em) {
+    h2, .h2 {
+        font-size: 2em;
+        line-height: 1.15;
+    }
+}
+
+@media (min-width: 56.25em) {
+    h2, .h2 {
+        font-size: 2.1em;
+        line-height: 1.15;
+    }
+}
+
+h3, .h3 {
+    font-size: 1.375em;
+    line-height: 1.1;
+}
+
+@media (min-width: 43.75em) {
+    h3, .h3 {
+        font-size: 1.5em;
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 56.25em) {
+    h3, .h3 {
+        font-size: 1.75em;
+        line-height: 1.2;
+    }
+}
+
+h4, .h4 {
+    margin-top: 2em;
+    margin-bottom: 0.8em;
+    font-size: 1.125em;
+    line-height: 1.11111111;
+}
+
+@media (min-width: 43.75em) {
+    h4, .h4 {
+        line-height: 1.22222222;
+    }
+}
+
+blockquote {
+    font-size: 1.25em;
+    line-height: 1.25;
+    padding: 0;
+}
+
+@media (min-width: 43.75em) {
+    blockquote {
+        font-size: 1.5em;
+        line-height: 1.45833333;
+    }
+}

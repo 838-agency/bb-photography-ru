@@ -1,0 +1,245 @@
+/***************
+GLOBAL STYLES
+***************/
+
+.content {
+    position: relative;
+    padding-top: 0;
+    z-index: 1;
+}
+
+.container {
+    @include container(800px);
+    padding: 0;
+}
+
+body {
+    p, ul, ol {
+        font-size: 1.1em;
+    }
+}
+
+ol,
+ul {
+    padding: 0;
+}
+
+
+/***************
+HOMEPAGE STYLING
+***************/
+
+#home {
+    .posts, .pagination {
+        @include span(9 of 12);
+        float: none;
+        margin: 0 auto 1.5em;
+    }
+}
+
+
+/***************
+HEADER STYLING
+***************/
+
+.header {
+    position: relative;
+    padding: 0;
+    height: 7em;
+
+    .container {
+        @include container(800px);
+        position: relative;
+        padding: 2rem 0 0;
+    }
+
+    .navigation {
+        margin-top: 0.2rem;
+        font-size: 0.8em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        line-height: 1;
+        padding-left: 0;
+        font-weight: 700;
+
+        span {
+            margin-left: -0.1em;
+        }
+
+        span em {
+            position: absolute;
+            padding-right: 0.1em;
+            top: 0;
+            left: -0.9em;
+        }
+    }
+}
+
+.header.header-home {
+    height: 10em;
+    margin-bottom: 3rem;
+
+    h1 {
+        font-size: 3em;
+        line-height: 0.8;
+        letter-spacing: -1px;
+    }
+
+    h2 {
+        margin: 0.8em 0.2em;
+        font-size: 1.2em;
+    }
+
+    h4 {
+        margin: 0 0.2rem 0.8rem;
+        font-size: 1.125em;
+    }
+}
+
+
+/***************
+POST STYLING
+***************/
+
+.post,
+.page {
+    h1, h2, h3, h4, h5, h6, p, ul, ol, dl, .medium, .ct, .inset, .tall {
+        @include span(9 of 12);
+        float: none;
+        margin: 0 auto 2rem;
+    }
+
+    .medium, .ct, .inset, .tall {
+        margin: 3rem auto;
+    }
+
+    h1, .h1, h2, .h2, h3, .h3 {
+        margin: 1.5em auto 0.5em;
+    }
+
+    h4, .h4, h5, .h5, h6, .h6 {
+        margin: 2em auto 0.8em;
+    }
+
+    .postTitle {
+        letter-spacing: -1px;
+    }
+
+    .postTitle,
+    .postSubtitle {
+        width: 100%;
+    }
+
+    figure {
+        padding: 1.5rem 1.5rem 2rem;
+
+        figcaption {
+            font-size: 0.8em;
+            padding: 0.5rem 0 0;
+        }
+
+        &.wide figcaption {
+            padding: 0.5rem 2rem 2rem;
+        }
+
+        &.wide .image-meta {
+            padding: 0 1rem;
+            margin-top: 1.5rem;
+        }
+    }
+
+    .alert {
+        padding: 0
+    }
+}
+
+.sharing-container {
+    @include span(9 of 12);
+    float: none;
+    margin: 0 auto 2rem;
+}
+
+
+/***************
+POST NAV STYLING
+***************/
+
+.postNav {
+    .prev,
+    .next {
+        width: 50%;
+        height: 14rem;
+    }
+
+    article {
+        position: absolute;
+        top: 50%;
+        padding: 3rem;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
+
+    .prev {
+        float: left;
+
+        &.image:before {
+            background-color: fade-out($white, 0.15);
+        }
+    }
+
+    .next {
+        float: right;
+
+        &.image:before {
+            background-color: fade-out($bg-color, 0.15);
+        }
+    }
+}
+
+
+/***************
+FOOTER STYLES
+***************/
+
+.footer {
+    margin-top: 5rem;
+
+    .container {
+        padding: 1rem 0;
+    }
+
+    .footerNav {
+        position: relative;
+        top: 50%;
+        padding: 2rem;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
+
+    .footerStickyCopy {
+        text-align: left;
+    }
+
+    .footerStickyCopy p {
+        @include container(600px);
+        position: relative;
+    }
+
+    .footerStickyCopy .copy span {
+        margin-left: 8rem;
+    }
+
+    .footerStickyCopy .copy .license-container {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-left: 0;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
+}

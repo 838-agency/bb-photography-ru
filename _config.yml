@@ -1,0 +1,41 @@
+original_title_html: The Bastards Book <span><em>of</em>&nbsp;Photography</span>
+title: О фотографии по-простому
+title_html: О фотографии <em>по-простому</em>
+description: Руководство для начинающих фотографов
+author: Дэн Нгуен
+
+cname: photography.kangelari.com
+url: http://photography.kangelari.com
+baseurl: ""
+permalink: lessons/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: pygments
+
+navigation:
+ - title: Об этой книге
+   url: /about/
+ - title: Оглавление
+   url: /toc/
+
+google_analytics: "UA-6950792-4"
+github_repo_url: https://github.com/838-agency/bb-photography-ru
+license_url: http://creativecommons.org/licenses/by-nc/3.0/us/deed.ru
+
+# image handling
+cover_img: ny-giants-super-bowl-parade-ticker-_-6838582959.jpg
+images_dir: /assets/content/images
+graphics_dir: /assets/content/graphics
+source_images_dir: /assets/content/images/_source
+
+posts_dir: /lessons
+
+exclude: [
+  "/assets/content/images/image_metadata_db",
+  "config.rb",
+  "/assets/scss/",
+  "README.md",
+  "THEME.md"
+]
