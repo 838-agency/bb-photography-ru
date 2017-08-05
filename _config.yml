@@ -37,5 +37,7 @@ exclude: [
   "config.rb",
   "/assets/scss/",
   "README.md",
-  "THEME.md"
+  "THEME.md",
+  "Gemfile",
+  "Gemfile.lock"
 ]
