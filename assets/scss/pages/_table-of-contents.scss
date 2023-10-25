@@ -3,15 +3,16 @@
 }
 
 .table-of-contents .posts {
-    @include container;
-    margin-right: -gutter();
+    @include clearfix();
+    max-width: 100%;
+    margin-right: -2%;
     width: 100%;
 }
 
 .table-of-contents .posts li {
-    @include span(4 of 12);
-    @include gutters(inside);
-    margin-right: 0;
+    max-width: 31.333%;
+    margin-right: 2%;
+    float: left;
     height: 23rem;
     margin-bottom: 3rem;
 
@@ -87,9 +88,9 @@
 
 @media only screen and (max-width: 839px) {
     .table-of-contents .posts li {
-        @include span(6 of 12);
-        @include gutters(inside);
-        margin-right: 0;
+        max-width: 48%;
+        margin-right: 2%;
+        float: left;
         margin-bottom: 2rem;
     }
 }
@@ -103,7 +104,9 @@
         float: none;
         padding: 0;
         width: 100%;
+        max-width: 100%;
         height: auto;
+        margin-right: 0;
     }
 
     .table-of-contents .posts figure {
