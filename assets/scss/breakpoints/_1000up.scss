@@ -1,10 +1,16 @@
 .container {
-    @include container(960px);
+    // @include container(960px);
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header {
     .container {
-        @include container(960px);
+        // @include container(960px);
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -19,6 +25,9 @@ FOOTER STYLES
 
 .footer {
     .footerStickyCopy p {
-        @include container(720px);
+        // @include container(720px);
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

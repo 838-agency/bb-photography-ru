@@ -4,7 +4,6 @@ title_html: О фотографии <em>по-простому</em>
 description: Руководство для начинающих фотографов
 author: Дэн Нгуен
 
-cname: photography.kangelari.com
 url: http://photography.kangelari.com
 baseurl: ""
 permalink: lessons/:title/
@@ -32,12 +31,16 @@ source_images_dir: /assets/content/images/_source
 
 posts_dir: /lessons
 
-exclude: [
-  "/assets/content/images/image_metadata_db",
-  "config.rb",
-  "/assets/scss/",
-  "README.md",
-  "THEME.md",
-  "Gemfile",
-  "Gemfile.lock"
-]
+sass:
+  sass_dir: /assets/scss/
+  style: compressed
+
+exclude:
+  - /assets/content/images/image_metadata_db
+  - /assets/content/**/*.txt
+  - config.rb
+  - /assets/scss/
+  - README.md
+  - THEME.md
+  - Gemfile
+  - Gemfile.lock

@@ -13,6 +13,7 @@ html {
 }
 
 body {
+    margin: 0;
     min-width: 320px;
     font-family: $serif;
     line-height: 1.75;
@@ -45,7 +46,10 @@ img, video, audio, iframe, object{
 
 // Layout
 .container {
-    @include container(610px);
+    // @include container(610px);
+    max-width: 610px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 20px;
 }
 
@@ -512,7 +516,10 @@ FOOTER STYLING
     text-align: center;
 
     .container {
-        @include container(480px);
+        // @include container(480px);
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
         padding-top: .5em;
     }
 

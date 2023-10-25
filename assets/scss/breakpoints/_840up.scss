@@ -9,7 +9,10 @@ GLOBAL STYLES
 }
 
 .container {
-    @include container(800px);
+    // @include container(800px);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
 }
 
@@ -31,7 +34,7 @@ HOMEPAGE STYLING
 
 #home {
     .posts, .pagination {
-        @include span(9 of 12);
+        width: 75%;
         float: none;
         margin: 0 auto 1.5em;
     }
@@ -48,7 +51,10 @@ HEADER STYLING
     height: 7em;
 
     .container {
-        @include container(800px);
+        // @include container(800px);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
         position: relative;
         padding: 2rem 0 0;
     }
@@ -106,7 +112,7 @@ POST STYLING
 .post,
 .page {
     h1, h2, h3, h4, h5, h6, p, ul, ol, dl, .medium, .ct, .inset, .tall {
-        @include span(9 of 12);
+        width: 75%;
         float: none;
         margin: 0 auto 2rem;
     }
@@ -156,7 +162,7 @@ POST STYLING
 }
 
 .sharing-container {
-    @include span(9 of 12);
+    width: 75%;
     float: none;
     margin: 0 auto 2rem;
 }
@@ -225,7 +231,10 @@ FOOTER STYLES
     }
 
     .footerStickyCopy p {
-        @include container(600px);
+        // @include container(600px);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
         position: relative;
     }
 
