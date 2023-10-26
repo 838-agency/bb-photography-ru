@@ -1,31 +1,27 @@
 ---
 ---
 
-.whatever {
-  background-color: #222;
-}
-
 // Reset using Normalize
-// @import "normalize";
+@import "normalize";
 
 // Site configuration
-// @import "config";
+@import "config";
 
 // Import Partials
-// @import "partials/typography";
-// @import "partials/mixins";
-// @import "partials/tables";
-// @import "partials/original-title";
+@import "partials/typography";
+@import "partials/mixins";
+@import "partials/tables";
+@import "partials/original-title";
 
 // Pages
-// @import "pages/table-of-contents";
-// @import "pages/about";
-// @import "pages/404";
+@import "pages/table-of-contents";
+@import "pages/about";
+@import "pages/404";
 
 // Mobile up base styles
-// @import "breakpoints/mobileup";
+@import "breakpoints/mobileup";
 
 // Import media queries
-// @media only screen and (min-width: 480px) { @import "breakpoints/480up"; }
-// @media only screen and (min-width: 840px) { @import "breakpoints/840up"; }
-// @media only screen and (min-width: 1000px) { @import "breakpoints/1000up"; }
+@media only screen and (min-width: 480px) { @import "breakpoints/480up"; }
+@media only screen and (min-width: 840px) { @import "breakpoints/840up"; }
+@media only screen and (min-width: 1000px) { @import "breakpoints/1000up"; }
