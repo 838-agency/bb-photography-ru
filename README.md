@@ -12,17 +12,29 @@
 
 #### Как установить локально
 
-На Ubuntu 16.04 сначала нужно поставить системные пакеты:
+1. Установить Ruby (предпочтительно через `rbenv` либо `rvm`, актуальная версия указана в `.ruby-version`).
+
+2. Установить `exiftool`:
 
 ```
-sudo apt-get install ruby ruby-dev exiftool
+sudo apt install exiftool # для Ubuntu
 ```
 
-Потом установить зависимости для проекта (находясь в его директории):
+3. Установить зависимости для проекта (находясь в его директории):
 
 ```
 gem install bundler
 bundle install
 ```
 
-А после этого запускать сервер для разработки через `bundle exec jekyll serve` либо выполнять сборку через `bundle exec jekyll build`.
+4. Запустить сервер для разработки:
+
+```
+bundle exec jekyll serve
+``` 
+
+5. Выполнить сборку проекта: 
+
+```
+bundle exec jekyll build
+```
