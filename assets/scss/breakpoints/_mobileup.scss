@@ -46,7 +46,6 @@ img, video, audio, iframe, object{
 
 // Layout
 .container {
-    // @include container(610px);
     max-width: 610px;
     margin-left: auto;
     margin-right: auto;
@@ -516,7 +515,6 @@ FOOTER STYLING
     text-align: center;
 
     .container {
-        // @include container(480px);
         max-width: 480px;
         margin-left: auto;
         margin-right: auto;
