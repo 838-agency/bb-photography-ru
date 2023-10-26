@@ -9,7 +9,6 @@ GLOBAL STYLES
 }
 
 .container {
-    // @include container(800px);
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -51,7 +50,6 @@ HEADER STYLING
     height: 7em;
 
     .container {
-        // @include container(800px);
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
@@ -231,7 +229,6 @@ FOOTER STYLES
     }
 
     .footerStickyCopy p {
-        // @include container(600px);
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
